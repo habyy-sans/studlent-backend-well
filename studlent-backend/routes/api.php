@@ -11,6 +11,13 @@ use App\Http\Controllers\RevisionController;
 // ─────────────────────────────────────────────────────────────
 // PUBLIC
 // ─────────────────────────────────────────────────────────────
+Route::get('/test', function () {
+    return response()->json([
+        'success' => true,
+        'message' => 'Laravel Railway aktif',
+    ]);
+});
+
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
